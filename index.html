@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+Clone</title>
+    <link rel="shortcut icon" href="../hotstar.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      body
+      {
+           background-color: #141b29;
+      }
+        nav{
+            height: 2cm;
+        }
+        .d-block{
+            height: 14.5cm;
+            margin-top: 1.8cm;
+        }
+        #cards1{
+            display: flex;
+        }
+        .card{
+          background-color: #141b29;
+            padding: 10px;
+            border: 1px solid #141b29;
+        }
+        #moremovies1{
+          border-radius: 10cm;
+          background-color: blue;
+        }
+        #vijay{
+            color: blue;
+            border: 1px solid white;
+        }
+        #kids{
+          color: gold;
+          transition: 1s;
+        }
+        #kids:hover{
+          transform: scale(1.4);
+           z-index: 2; 
+        }
+        #movies{
+          transition: 1s;
+        }
+        #movies:hover{
+          color: skyblue;
+          transform: scale(1.2);
+           z-index: 2; 
+        }
+        #disney{
+          transition: 1s;
+        }
+        #disney:hover{
+          color: skyblue;
+          transform: scale(1.2);
+           z-index: 2; 
+        }
+        #sports{
+          transition: 1s;
+        }
+        #sports:hover{
+          color: skyblue;
+          transform: scale(1.2);
+           z-index: 2; 
+        }
+        #tv{
+          transition: 1s;
+        }
+        #tv:hover{
+          color: skyblue;
+          transform: scale(1.2);
+           z-index: 2; 
+        }
+        #disneyhotstar{
+          transition: 1s;
+        }
+        #disneyhotstar:hover{
+          color: goldenrod;
+          transform: scale(1.2);
+           z-index: 2;
+        }
+        #search{
+          margin-left: 10cm;
+        }
+        #carouselExampleIndicators{
+          height: 5cm;
+          width: 3cm;
+        }
+        h5{
+          color: white;
+        }
+        #row2{
+          display: flex;
+        }
+        .card1{
+          padding: 10px;
+          border: 1px solid #141b29;
+        }
+        .carousel-inner{
+          padding: 15px;
+          border: 1px solid #141b29;
+        }
+        .card-img-top{
+          transition: 1s;
+        }
+        .card-img-top:hover{
+           transform: scale(1.2);
+           z-index: 2; 
+        }
+        #recomanded{
+          display: flex;
+        }
+        #popular{
+          display: flex;
+        }
+        .dropdown{
+          border: 1px sloid black;
+          margin-left: 50px;
+        }
+        #login{
+          background-color: white;
+          border: 1px solid white;
+          color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #141b29 ;">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="disneyhotstar" href="#">Disney+Clone</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" id="tv" aria-current="page" href="#shows">Tv</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="movies" href="#recomanded">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="sports" href="#">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="disney" href="#">Disney+</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="kids" href="#">KiDS</a>
+              </li>
+              
+              <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="drop"><a  class="dropdown-item" href="#">Action</a></li>
+                <li class="drop"><a class="dropdown-item" href="#">Another action</a></li>
+                <li class="drop"><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul> -->
+
+              <form class="d-flex" id="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul> -->
+              
+
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Subscribe/login
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><button id="login" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Subscribe</button></li>
+                  <li><button id="login" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Login</button></li>
+                  
+                  <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+              </div>
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="../project/1395361-h-a9af817e06df.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- <h5>Bigg Boss</h5> -->
+              <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure in atque ad quidem nesciunt reiciendis, eius animi rerum, corrupti blanditiis et autem molestias unde tenetur minima ducimus asperiores aperiam vitae.</p> -->
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="../master 4k.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p> -->
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="../project/1104603-h-788dec723da4.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p> -->
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h5 id="shows">Popular Shows</h5>
+        <div id="popular">
+          <div class="card" style="width: 12rem;">
+            <img src="../biggboss.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../bharathikannamma.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../anupamma.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../thelegendhanuman.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../kana kaanum.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../Doraeman.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../baakiyalakshmi.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+        </div>
+
+      <h5>Movies Recommended For You</h5>
+        <div id="recomanded">
+          <div class="card" style="width: 12rem;">
+            <img src="../vikram.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../comali.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../geetha govindam.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../prince1.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../RRR.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../83.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+           <div class="card" style="width: 12rem;">
+            <img src="../m.s.dhoni.webp" class="card-img-top" alt="...">
+            <br>
+           </div>
+        </div>
+      
+      <h5>Vijay Movies</h5>
+      <div id="cards1">
+      <div class="card" id="master" style="width: 12rem;">
+        <img src="./masterpic.jpg" class="card-img-top" alt="...">
+        <br>
+         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="./beastpic.jpg" class="card-img-top" alt="...">
+        <br>
+         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="./download.jpg" class="card-img-top" alt="...">
+        <br>
+         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="../project/sarkar.jpg" class="card-img-top" alt="...">
+        <br>
+         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="./tuppaki.jpg" class="card-img-top" alt="...">
+        <br> 
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="./Kaththi.jpg" class="card-img-top" alt="...">
+        <br>
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+       </div>
+       <div class="card" style="width: 12rem;">
+        <img src="./nanban.jpg" class="card-img-top" alt="...">
+        <br>
+        <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+       </div>
+     </div>
+     <h5>Ajith Movies</h5>
+       <div id="row2">
+        <div class="card" style="width: 12rem;">
+          <img src="./aarambam.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./valimai.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./vedalam.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./veeram.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./visvasam.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./vivegam.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+         <div class="card" style="width: 12rem;">
+          <img src="./yennai arindal.jpg" class="card-img-top" alt="...">
+          <br>
+          <!-- <a href="#" class="btn btn-primary">Watch</a> -->
+         </div>
+        </div>
+
+        <div>
+          <footer class="text-white pt-5 pb-4" style="background-color: #141b29;">
+
+            <div class="container text-center text-md-left">
+          
+              <div class="row text-center text-md-left">
+          
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Disney+Clone</h5>
+                  <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                    ital consectetur lorem ipsum dolor sit amet adipisicing elit.</p>
+                  
+                </div>
+          
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> TheProviders</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> SourceFiles</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+                </p>
+          
+                </div>
+          
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> Your Account</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> Become an Affiliates</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;">Shipping Rates</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+                </p>
+                </div>
+          
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning" >Contact</h5>
+                  <p>
+                    <i class="fas fa-home mr-3"></i>New York, NY 2333, US
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope mr-3"></i>theproviders98@gmail.com
+                  </p>
+                  <p>
+                    <i class="fas fa-phone mr-3"></i>+92 3162859445
+                  </p>
+                  <p>
+                    <i class="fas fa-print	 mr-3"></i>+01 335 633 77
+                  </p>
+                </div>
+                
+              </div>
+          
+              <hr class="mb-4">
+          
+              <div class="row align-items-center">
+          
+                <div class="col-md-7 col-lg-8">
+                  <p>	Copyright ©2020 All rights reserved by:
+                    <a href="#" style="text-decoration: none;">
+                      <strong class="text-warning">The Providers</strong>
+                    </a></p>
+                  
+                </div>
+          
+                <div class="col-md-5 col-lg-4">
+                  <div class="text-center text-md-right">
+          
+                    <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                  
+                </div>
+                
+              </div>
+          
+            </div>
+            
+          </footer>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">UserName/Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
