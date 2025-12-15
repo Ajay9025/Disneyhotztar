@@ -126,6 +126,124 @@
           border: 1px solid white;
           color: black;
         }
+        /* =======================
+   GLOBAL FIXES
+======================= */
+body {
+  margin: 0;
+  padding-top: 80px; /* space for fixed navbar */
+}
+
+.card {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make movie rows scrollable on PC */
+#popular,
+#recomanded,
+#cards1,
+#row2 {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+#popular::-webkit-scrollbar,
+#recomanded::-webkit-scrollbar,
+#cards1::-webkit-scrollbar,
+#row2::-webkit-scrollbar {
+  height: 6px;
+}
+
+#popular::-webkit-scrollbar-thumb,
+#recomanded::-webkit-scrollbar-thumb,
+#cards1::-webkit-scrollbar-thumb,
+#row2::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+/* Carousel height responsive */
+.d-block {
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Navbar search fix */
+#search {
+  margin-left: auto;
+}
+
+/* =======================
+   TABLET (≤ 992px)
+======================= */
+@media (max-width: 992px) {
+  .d-block {
+    height: 55vh;
+  }
+
+  .card {
+    min-width: 150px;
+  }
+}
+
+/* =======================
+   MOBILE (≤ 576px)
+======================= */
+@media (max-width: 576px) {
+
+  /* Navbar */
+  nav {
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  #search {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  /* Carousel */
+  .d-block {
+    height: 35vh;
+  }
+
+  /* Section titles */
+  h5 {
+    font-size: 16px;
+    margin: 15px 10px;
+  }
+
+  /* Cards */
+  .card {
+    min-width: 130px;
+    padding: 5px;
+  }
+
+  .card-img-top:hover {
+    transform: none; /* disable zoom on mobile */
+  }
+
+  /* Footer text alignment */
+  footer {
+    text-align: center;
+  }
+
+  footer .col-md-7,
+  footer .col-md-5 {
+    margin-bottom: 10px;
+  }
+}
+
     </style>
 </head>
 <body>
